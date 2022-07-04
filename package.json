@@ -1,0 +1,20 @@
+{
+  "name": "moon-river-high-jewelry",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.6.0",
+    "sass": "^1.52.2",
+    "swiper": "^8.2.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0"
+  }
+}

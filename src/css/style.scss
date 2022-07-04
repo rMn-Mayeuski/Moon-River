@@ -1,0 +1,470 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.wrapper{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.banner{
+    &__left{
+        padding: 70px 0 80px 162px;
+    }
+    &__right{
+        background-color: rgba(39, 39, 39, 1);
+        padding: 77px 162px 60px 140px;
+    }
+    &-main{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-ring{
+        position: absolute;
+        bottom: 45%;
+        right: 66%;
+    }
+}
+
+.left{
+    &__title{
+        margin-top: 326px;
+        font-family: 'Forum';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 71px;
+    }
+    &__subtitle{
+        margin-top: 50px;
+        text-align: end;
+        position: relative;
+        font-family: 'Segoe UI';
+        font-style: italic;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    &__subtitle::before{
+        position: absolute;
+        content: "";
+        width: 130px;
+        height: 1px;
+        background: rgba(39, 39, 39, 1);
+        bottom: 9px;
+        left: 0; 
+    }
+    &__lang-switch{
+        margin-top: 359px;
+    }
+    &__lang-switch a{
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}
+.lang-switch__active{
+    color: rgba(39, 39, 39, 1);
+}
+.lang-switch__inactive{
+    color: rgba(196, 196, 196, 1);
+}
+.banner__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+
+.right__menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right__description > *:not(:last-child){
+    margin-bottom: 9px;
+}
+.right__description{
+    text-align: end;
+    &-name{
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 1);
+    }
+    &-description{
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 23px;
+        color: rgba(194, 194, 194, 1);
+    }
+    &-price{
+        font-family: 'Segoe UI';
+        font-style: italic;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: rgba(239, 197, 139, 1);
+    }
+}
+
+.right__burger{
+        position: relative;
+        width: 30px;
+        height: 16px;
+        position: relative;
+    & span {
+        background-color: rgba(255, 255, 255, 1);
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 7px;
+    }
+    &::before,
+    &::after {
+        content:'';
+        background-color: rgba(255, 255, 255, 1);
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+    &::before {
+        top: 0;
+    }
+    &::after {
+        bottom: 0;
+    }
+}
+
+
+.features {
+    margin: 20px 0 20px;
+        &-cards{
+        display: flex;
+        justify-content: space-between;
+}
+}
+
+.features-card{
+    flex-basis: 49%;
+    position: relative;
+    &__text{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        z-index: 4;
+    }   
+}
+.features-card::before{
+    position: absolute;
+    content: "";
+    background: black;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 50%;
+}
+.card{
+    &-img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+    }
+    &-description{
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 31px;
+        color: rgba(255, 255, 255, 1);
+    }
+    &-title{
+        font-family: 'Forum';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 71px;
+        color: rgba(255, 255, 255, 1);
+        position: relative;
+    }
+    &-title::after{
+        content: "";
+        width: 130px;
+        height: 1px;
+        background: rgba(255, 255, 255, 1);
+        position: absolute;
+        bottom: -23px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.showcase{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0px 20px 0px;
+    justify-content: space-around;
+
+    &-aside-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-main-card{
+        margin: 0 20px 0 20px;
+        position: relative;
+    }
+}
+
+.showcase-card__text-main{
+    position: absolute;
+    bottom: 0px;
+}
+
+.card-top{
+    margin: 0 0 20px 0;
+    background-color: rgba(237, 237, 237, 1);
+    & img{
+        margin: 60px 70px 67px 70px;
+    }
+}
+.card-bottom{
+    background-color: rgba(237, 237, 237, 1);
+    & img{
+        margin: 60px 70px 67px 70px;
+    }
+}
+
+.text{
+    margin: 0 0 20px 30px;
+    &-title{
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: rgba(39, 39, 39, 1);
+    }
+    &-discription{
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 23px;
+        color: rgba(117, 117, 117, 1);
+        margin: 9px 0px 9px 0;         
+    }
+    &-price{
+        font-family: 'Segoe UI';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: rgba(226, 182, 122, 1);
+    }
+}
+
+
+@import "../../node_modules/swiper/swiper.min.css";
+@import "../../node_modules/swiper/modules/pagination/pagination.min.css";
+@import "../../node_modules/swiper/modules/navigation/navigation.min.css";
+@import "../../node_modules/swiper/swiper-bundle.min.css";
+
+.swiper{
+    background-color: rgba(39, 39, 39, 1);
+    padding: 100px 0;
+    &-title{
+        color: rgba(255, 255, 255, 1);
+        font-family: 'Forum';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 53px;
+        letter-spacing: 0.03em;
+        margin: 0 0 80px 162px;
+    }
+    &-bottom{
+        margin: 80px 162px 0 162px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-social a:not(:last-child){
+        margin: 0 20px 0 0;
+    }
+    &-bottom__nav{
+        position: relative;
+        flex-basis: 30%;
+    }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    width: 100%;
+    bottom: -9px;
+    left: 0;
+}
+
+.swiper-pagination-bullet{
+    background: rgba(101, 101, 101, 1);
+}
+
+.swiper-pagination-bullet-active{
+    background: rgba(255, 255, 255, 1);
+    border: 5px solid #FFFFFF;
+}
+
+.swiper-button-prev {
+    background-image: url(../img/slider/Line.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 51px;
+}
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-next {
+    background-image: url(../img/slider/Line2.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 51px;
+}
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-slide{
+    width: auto !important;
+}
+
+@mixin ft-btm__title {
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+}
+
+@mixin ft-bt__desc {
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+    color: rgba(194, 194, 194, 1);
+}
+
+.footer{
+    padding: 80px 0 90px 0;
+    background-color: rgba(39, 39, 39, 1);
+    &-top{
+        margin-bottom: 90px;
+    }
+    &-top a{
+        color: rgba(255, 255, 255, 1);
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 450;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        &:not(:last-child){
+            margin-right: 64px;
+        }
+    }
+    &-bottom{
+        display: flex;
+        justify-content: space-between;
+        & a {
+            flex-basis: 50%;
+        }
+        &__logo{
+            margin-top: 23px
+        }
+    }
+}
+
+.contacts{
+    &-title{
+        @include ft-btm__title;
+    }
+    &-description{
+        @include ft-bt__desc;
+        margin: 15px 0;
+    }
+    &-social a:not(:last-child){
+        margin-right: 20px;
+    }
+}
+
+.news{
+    &-title{
+        @include ft-btm__title;
+    }
+    &-form{
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-email {
+        border:none;
+        background-image:none;
+        background-color:transparent;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+        margin-bottom: 10px;
+        color: rgba(239, 197, 139, 1);
+    }
+    &-btn{
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+}
